@@ -1,0 +1,926 @@
+
+
+html,
+body {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* Simple Grid System */
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;  /* Built-in spacing between columns */
+  }
+  
+  /* Column base */
+  [class^="col-"] {
+	width: 100%;
+  }
+  
+  /* Small screens (sm) */
+  @media (min-width: 576px) {
+	.col-sm-6 { width: calc(50% - 10px); }
+  }
+  
+  /* Medium screens (md) */
+  @media (min-width: 768px) {
+	.col-md-4 { width: calc(33.33% - 14px); }
+	.col-md-6 { width: calc(50% - 10px); }
+	.col-md-8 { width: calc(66.66% - 7px); }
+  }
+  
+  /* Large screens (lg) */
+  @media (min-width: 992px) {
+	.col-lg-3 { width: calc(25% - 15px); }
+	.col-lg-4 { width: calc(33.33% - 14px); }
+	.col-lg-6 { width: calc(50% - 10px); }
+	.col-lg-8 { width: calc(66.66% - 7px); }
+	.col-lg-9 { width: calc(75% - 5px); }
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 600;
+	color: #474747;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14.1px;
+	color: #878787;
+	line-height: 2.2;
+	font-weight: 500;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+
+::placeholder {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #d82a4e;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+/*---------------------
+  Helper CSS
+-----------------------*/
+
+.section-title {
+	text-align: center;
+	padding: 0 110px;
+	margin-bottom: 110px;
+}
+
+.section-title h2 {
+	font-size: 48px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.section-title p {
+	margin-bottom: 0;
+	font-weight: 500;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.vertical-padding {
+	padding-top: 115px;
+	padding-bottom: 115px;
+}
+
+
+
+
+
+/*---------------------
+  Commom elements
+-----------------------*/
+
+/* buttons */
+
+.site-btn {
+	display: inline-block;
+	min-width: 196px;
+	text-align: center;
+	border: none;
+	padding: 15px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	position: relative;
+	color: #fff;
+	cursor: pointer;
+	background: #d82a4e;
+}
+
+.site-btn:hover {
+	color: #fff;
+}
+
+.site-btn.btn-dark {
+	background: #000;
+}
+
+.site-btn.btn-fade {
+	background: #e4edef;
+	color: #1f1f1f;
+}
+
+
+
+/*------------------
+  Header section
+---------------------*/
+
+.header-section {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 60px;
+}
+
+.site-logo {
+	display: inline-block;
+}
+
+.main-menu ul {
+	list-style: none;
+}
+
+.main-menu ul li {
+	display: inline;
+}
+
+.main-menu ul li a {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	margin-left: 45px;
+	font-weight: 600;
+	padding: 20px 0 5px;
+}
+
+.main-menu ul li a:hover {
+	color: #d82a4e;
+}
+
+.header-btn {
+	float: right;
+	margin-right: 0;
+}
+
+.nav-switch {
+	display: none;
+}
+
+/*------------------
+  Hero Section
+---------------------*/
+
+.hero-section {
+	height: 100vh;
+	background-image: url('img/bg.jpg'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.hero-text {
+	text-align: center;
+	padding-top: 340px;
+	margin-bottom: 105px;
+}
+
+.hero-text h2 {
+	font-size: 60px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.login-form {
+	display: flex;
+	justify-content: center;
+	padding-top: 42px;
+}
+
+.hero-text h2,
+.hero-text p {
+	color: #fff;
+}
+
+.login-form input[type=text],
+.login-form input[type=email] {
+	height: 48px;
+	width: 32%;
+	padding: 0 30px;
+	margin-right: 22px;
+	float: left;
+	border: none;
+	font-size: 14px;
+}
+
+.login-form .site-btn {
+	min-width: 214px;
+}
+
+/*------------------
+  Categories section
+---------------------*/
+
+.categories-section .container {
+	margin-bottom: -34px;
+}
+
+.categorie-item {
+	margin-bottom: 34px;
+	background: #edf4f6;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.categorie-item .ci-thumb {
+	background-size: cover;
+	height: 148px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.categorie-item .category-item-text {
+	padding: 40px 35px;
+}
+
+.categorie-item .category-item-text h5 {
+	margin-bottom: 5px;
+}
+
+.categorie-item .category-item-text span {
+	font-size: 18px;
+	font-weight: 600;
+	color: #d82a4e;
+}
+
+.categorie-item:hover {
+	background: #d82a4e;
+}
+
+.categorie-item:hover .category-item-text h5,
+.categorie-item:hover .category-item-text p,
+.categorie-item:hover .category-item-text span {
+	color: #fff;
+}
+
+/*------------------
+  Search section
+---------------------*/
+
+.search-warp {
+	background: #d82a4e;
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+
+.search-warp .section-title {
+	margin-bottom: 30px;
+}
+
+.course-search-form {
+	background: #fff;
+	padding: 44px 38px;
+	margin: auto 40px;
+}
+
+.course-search-form input[type=text],
+.course-search-form input[type=email] {
+	height: 56px;
+	width: 30%;
+	padding: 0 30px;
+	margin-right: 18px;
+	float: left;
+	border: none;
+	font-size: 14px;
+	background: #edf4f6;
+}
+
+.course-search-form input[type=text]:focus,
+.course-search-form input[type=email]:focus {
+	border-bottom: 2px solid #d82a4e;
+}
+
+.course-search-form .site-btn {
+	min-width: 198px;
+	padding: 16px 10px;
+}
+
+
+
+
+/*------------------
+  Course section
+---------------------*/
+
+.course-warp {
+	max-width: 1559px;
+	padding: 0 15px;
+	margin: 0 auto -30px;
+}
+
+.course-item {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.course-item .course-thumb {
+	height: 270px;
+}
+
+.course-item .course-thumb .price {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 600;
+	background: #d82a4e;
+	display: inline-block;
+	padding: 13px 19px;
+	margin: 14px;
+	position: absolute;
+	top: 8px; 
+	left: 8px;
+}
+
+
+
+.course-item .course-info {
+	background: #edf4f6;
+}
+
+.course-item .course-info .course-text {
+	padding: 45px 33px 25px;
+}
+
+.course-item .course-info .course-text h5 {
+	margin-bottom: 5px;
+}
+
+.course-item .course-info .course-text .students {
+	font-size: 18px;
+	font-weight: 600;
+	color: #d82a4e;
+}
+
+.course-item .course-info .course-author {
+	border-top: 1px solid #d4dee1;
+	padding: 14px 33px;
+	overflow: hidden;
+}
+
+.course-item .course-info .course-author .author-image {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	float: left;
+}
+
+.course-item .course-info .course-author p {
+	padding-left: 60px;
+	font-weight: 600;
+}
+
+.course-item .course-info .course-author p span {
+	color: #d82a4e;
+}
+
+
+.course-filter {
+	list-style: none;
+	text-align: center;
+	padding-top: 50px;
+	margin-bottom: 60px;
+}
+
+.course-filter li {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 600;
+	color: #474747;
+	padding: 12px 10px 5px;
+	margin: 0 10px;
+	border-bottom: 4px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.course-filter {
+	color: #d82a4e;
+	border-bottom: 4px solid #d82a4e;
+}
+
+
+
+/*------------------
+  Signup section
+---------------------*/
+
+.signup-section {
+	background: #d82a4e;
+	position: relative;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.signup-section .section-title {
+	padding: 0;
+	margin-bottom: 55px;
+}
+
+
+
+.signup-warp {
+	padding: 80px;
+}
+
+
+
+.signup-form,
+.contact-form {
+	background: #fff;
+	padding: 32px;
+}
+
+.signup-form input[type=text],
+.signup-form input[type=email],
+.signup-form textarea,
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+	height: 57px;
+	width: 88%;
+	padding: 0 30px;
+	margin-bottom: 27px;
+	float: left;
+	border: none;
+	font-size: 14px;
+	font-weight: 500;
+	background: #edf4f6;
+}
+
+.signup-form input[type=text]:focus,
+.signup-form input[type=email]:focus,
+.signup-form textarea:focus,
+.contact-form input[type=text]:focus,
+.contact-form input[type=email]:focus,
+.contact-form textarea:focus {
+	border-bottom: 2px solid #d82a4e;
+}
+
+.signup-form input[type=file],
+.contact-form input[type=file] {
+	display: none;
+}
+
+.signup-form textarea,
+.contact-form textarea {
+	padding-top: 23px;
+	padding-bottom: 15px;
+	height: 225px;
+}
+
+.signup-form .file-up-btn,
+.contact-form .file-up-btn {
+	display: block;
+	background: #3e3e3e;
+	color: #fff;
+	max-width: 175px;
+	padding: 13px 5px;
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 23px;
+	clear: both;
+	text-align: center;
+	overflow: hidden;
+}
+
+.signup-form .site-btn,
+.contact-form .site-btn {
+	padding: 17px 10px;
+}
+
+.featured-courses {
+	padding-top: 67px;
+}
+
+.join-section {
+	padding-top: 115px;
+	padding-bottom: 115px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.join-section .btn-register {
+	margin-top: 40px;
+}
+
+/*------------------
+  Footer section
+---------------------*/
+
+.footer-section {
+	border-top: 3px solid #d82a4e;
+}
+
+.footer-warp {
+	max-width: 1600px;
+	padding: 0 15px;
+	margin: 0 auto;
+	margin-top: 24px;
+}
+
+.widget-item {
+	width: calc(20% - 20px);
+	padding: 15px;
+}
+
+.widget-item h4 {
+	margin-bottom: 30px;
+}
+
+.widget-item ul {
+	list-style: none;
+	padding-top: 30px;
+}
+
+.widget-item ul li {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #878787;
+}
+
+.widget-item ul li:last-child {
+	margin-bottom: 0;
+}
+
+.widget-item ul a {
+	color: #878787;
+}
+
+.widget-item ul.contact-list li {
+	margin-bottom: 27px;
+	position: relative;
+	padding-left: 10px;
+}
+
+.widget-item ul.contact-list li:last-child {
+	margin-bottom: 0;
+}
+
+.widget-item ul.contact-list li:after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	left: -5px;
+	top: 6px;
+	border-radius: 50%;
+	background: #d82a4e;
+}
+
+.footer-newslatter {
+	padding-right: 38px;
+}
+
+.footer-newslatter input[type=email] {
+	height: 52px;
+	width: 100%;
+	padding: 0 30px;
+	margin-bottom: 27px;
+	float: left;
+	border: none;
+	font-size: 14px;
+	background: #edf4f6;
+}
+
+.footer-newslatter .site-btn {
+	min-width: 143px;
+	margin-bottom: 20px;
+}
+
+.footer-newslatter p {
+	margin-bottom: 0;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.footer-bottom {
+	overflow: hidden;
+	background: #edf4f6;
+	padding: 20px 0;
+	margin-top: 50px;
+}
+
+.footer-menu {
+	list-style: none;
+	float: right;
+}
+
+.footer-menu li {
+	display: inline;
+}
+
+.footer-menu li:last-child a {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.footer-menu li:last-child a:after {
+	display: none;
+}
+
+.footer-menu li a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	color: #474747;
+	padding-right: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.footer-menu li a:after {
+	position: absolute;
+	content: "|";
+	right: 0;
+	top: 0;
+}
+
+.copyright {
+	padding-top: 3px;
+	float: left;
+	font-size: 14px;
+	font-weight: 600;
+	color: #474747;
+}
+
+
+
+/*------------------
+  Responsive
+---------------------*/
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1180px;
+	}
+}
+
+
+/* Medium screen : 992px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.main-menu ul li a {
+		margin-left: 38px;
+	}
+	.header-btn {
+		min-width: 160px;
+	}
+	.hero-text h2 {
+		font-size: 55px;
+	}
+	.login-form .site-btn {
+		min-width: 160px;
+	}
+	.course-search-form input[type=text],
+	.course-search-form input[type=email] {
+		width: 34.6%;
+	}
+	.course-search-form .site-btn {
+		min-width: 173px;
+	}
+	.course-item .course-thumb {
+		height: 220px;
+	}
+	.course-item .course-info .course-text {
+		padding: 45px 15px 25px;
+	}
+	.course-item .course-info .course-author {
+		padding: 14px 15px;
+	}
+	.signup-warp {
+		padding: 0 35px;
+	}
+	
+}
+
+/* Tablet :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.section-title {
+		padding: 0;
+	}
+	.main-menu ul li a {
+		margin-left: 20px;
+	}
+	.header-btn {
+		min-width: 90px;
+	}
+	.hero-text h2 {
+		font-size: 43px;
+	}
+	.login-form input[type=text],
+	.login-form input[type=email] {
+		width: 33%;
+	}
+	.login-form .site-btn {
+		min-width: 190px;
+	}
+	.signup-section .signup-bg {
+		display: none;
+	}
+	.course-search-form {
+		text-align: center;
+	}
+	.course-search-form input[type=text],
+	.course-search-form input[type=email] {
+		width: 48.1%;
+		margin-bottom: 20px;
+	}
+	.course-search-form input[type=text].last-m,
+	.course-search-form input[type=email].last-m {
+		margin-right: 0;
+	}
+	
+	
+	.course-item .course-thumb {
+		height: 215px;
+	}
+	.widget-item {
+		width: 33.3333%;
+		margin-bottom: 50px;
+	}
+
+	
+}
+
+/* Mobile screen */
+
+@media only screen and (max-width: 767px) {
+	.section-title {
+		padding: 0;
+	}
+	.section-title h2 {
+		font-size: 40px;
+	}
+	.header-btn {
+		display: none;
+	}
+	
+	.main-menu {
+		background: #fff;
+		margin-top: 22px;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 100%;
+		display: none;
+		z-index: 999;
+	}
+	.main-menu ul li {
+		display: block;
+	}
+	.main-menu ul li a {
+		margin-left: 0;
+		padding: 17px 25px;
+		border-bottom: 1px solid #e8e8e8;
+		display: block;
+		color: #474747;
+	}
+	.hero-text {
+		margin-bottom: 50px;
+	}
+	.hero-text h2 {
+		font-size: 40px;
+	}
+	.login-form {
+		text-align: center;
+	}
+	.login-form input[type=text],
+	.login-form input[type=email] {
+		margin-bottom: 20px;
+		width: 47.6%;
+	}
+	.login-form input[type=text].last-s,
+	.login-form input[type=email].last-s {
+		margin-right: 0;
+	}
+	.search-warp {
+		padding: 40px 30px 30px;
+	}
+	.course-search-form input[type=text],
+	.course-search-form input[type=email] {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	.signup-warp {
+		padding: 0 60px;
+	}
+	.signup-section .signup-bg {
+		display: none;
+	}
+	.widget-item {
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	
+	.course-item.featured-course .course-thumb {
+		position: relative;
+		width: 100%;
+		height: 350px;
+	}
+	.course-meta-area {
+		padding: 35px 20px;
+	}
+	.course-meta {
+		display: inline-block;
+		padding: 5px 0;
+		width: 100%;
+		margin-bottom: 15px;
+		border-right: none;
+	}
+}
